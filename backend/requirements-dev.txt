@@ -1,0 +1,7 @@
+# Development and test dependencies (includes runtime dependencies).
+-r requirements.txt
+pytest==9.1.1
+ruff==0.17.2
+mypy==2.4.0
+# reportlab is only used to generate the sample/fixture PDFs (tools/sample_docs.py).
+reportlab==5.1.0

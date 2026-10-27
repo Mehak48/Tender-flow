@@ -1,0 +1,41 @@
+[project]
+name = "tenderflow-backend"
+version = "0.1.0"
+description = "TenderFlow backend: tender document parsing, quotation drafting, validation and export."
+requires-python = ">=3.11"
+license = "MIT"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"
+filterwarnings = [
+    # pdfminer emits noisy warnings for some generated fixtures; they are not test failures.
+    "ignore::DeprecationWarning:pdfminer.*",
+]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+extend-exclude = [".venv", "data"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "S", "SIM"]
+ignore = [
+    "S101",  # assert is fine in tests
+    "S603",  # subprocess call: we only run LibreOffice with fixed arguments
+    "S607",  # partial executable path for soffice is resolved via shutil.which
+    "B008",  # FastAPI dependency injection pattern
+    "E501",  # line length is handled by `ruff format`; long regexes and messages stay on one line
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S", "B"]
+"tools/*" = ["S311"]
+
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true
+warn_unused_ignores = true
+check_untyped_defs = true
+exclude = ["^\\.venv/", "^data/"]

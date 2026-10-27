@@ -1,0 +1,60 @@
+/*
+ * TenderFlow design tokens — soft silver, lavender and muted apricot (see docs/DESIGN.md).
+ * Colours from the product brief; --color-text-secondary is darkened from #77727E to #6B6672 so small
+ * secondary text keeps >= 4.5:1 contrast on the tinted surfaces as well as on white.
+ */
+:root {
+  --color-background: #f7f6f8;
+  --color-surface: #ffffff;
+  --color-surface-subtle: #f1eef4;
+  --color-silver: #e4e1e8;
+  --color-border: #e9e5ec;
+  --color-border-strong: #d6d0db;
+  --color-lavender: #ddd3f1;
+  --color-lavender-soft: #f0eaf9;
+  --color-lavender-ink: #6e5a86;
+  --color-apricot: #f5c6a5;
+  --color-apricot-hover: #efb990;
+  --color-apricot-soft: #fff0e5;
+  --color-apricot-ink: #573b2d;
+  --color-text: #34313a;
+  --color-text-secondary: #6b6672;
+  --color-accent-dark: #55465f;
+  --color-success-soft: #e8f2e9;
+  --color-success-ink: #3f6345;
+  --color-warning-soft: #fff0df;
+  --color-warning-ink: #7e5229;
+  --color-error-soft: #f8e7e8;
+  --color-error-ink: #8b3a3f;
+  --color-canvas: #efedf0;
+
+  /* 8-point spacing scale (4 for hairline adjustments). */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --shadow-sm: 0 1px 2px rgba(52, 49, 58, 0.06);
+  --shadow-md: 0 10px 30px rgba(58, 43, 67, 0.07);
+  --focus-ring: 0 0 0 3px rgba(110, 90, 134, 0.35);
+
+  --font-sans: 'DM Sans Variable', 'DM Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Manrope Variable', 'Manrope', var(--font-sans);
+  --font-document: 'DM Sans Variable', 'DM Sans', Georgia, serif;
+
+  --text-xs: 11.5px;
+  --text-sm: 12.5px;
+  --text-md: 14px;
+  --text-lg: 16px;
+  --text-xl: 19px;
+  --text-2xl: 26px;
+
+  --sidebar-width: 240px;
+  --topbar-height: 64px;
+}

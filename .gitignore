@@ -1,0 +1,57 @@
+# --- Secrets and local configuration --------------------------------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*.json
+secrets*.json
+
+# --- Private user data: uploads, exports, project files --------------------
+backend/data/
+data/
+uploads/
+exports/
+*.sqlite
+*.sqlite3
+*.db
+
+# --- Python ----------------------------------------------------------------
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# --- Node / frontend -------------------------------------------------------
+node_modules/
+frontend/dist/
+dist/
+*.tsbuildinfo
+.vite/
+coverage/
+
+# --- Temporary parsing / test artefacts ------------------------------------
+tmp/
+.tmp-*
+*.tmp
+docs/e2e-export.docx
+test-results/
+playwright-report/
+
+# --- Logs and OS / editor files --------------------------------------------
+*.log
+logs/
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.swp

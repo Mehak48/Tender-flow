@@ -1,0 +1,20 @@
+/* Fonts are bundled locally (no requests to font CDNs): DM Sans and Manrope, SIL Open Font License 1.1. */
+@import '@fontsource-variable/dm-sans';
+@import '@fontsource-variable/manrope';
+@import 'tailwindcss';
+@import './styles/tokens.css';
+@import './styles/app.css';
+
+/* Expose the design tokens to Tailwind utilities (e.g. bg-surface, text-secondary). */
+@theme inline {
+  --color-surface: var(--color-surface);
+  --color-subtle: var(--color-surface-subtle);
+  --color-lavender: var(--color-lavender);
+  --color-lavender-soft: var(--color-lavender-soft);
+  --color-apricot: var(--color-apricot);
+  --color-apricot-soft: var(--color-apricot-soft);
+  --color-ink: var(--color-text);
+  --color-secondary: var(--color-text-secondary);
+  --color-accent: var(--color-accent-dark);
+  --font-display: var(--font-display);
+}
